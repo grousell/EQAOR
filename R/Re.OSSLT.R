@@ -100,7 +100,7 @@ Re.OSSLT <- function (x) {
                                   )
                           )
 
-         x$Prior_G6_R <- ifelse (x$Prior_G6_ROverallLevel == "-1", "No Information",
+         x$Prior_G6_Read <- ifelse (x$Prior_G6_ROverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G6_ROverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G6_ROverallLevel == "1", "Level 1",
                                                  ifelse (x$Prior_G6_ROverallLevel == "2", "Level 2",
@@ -117,7 +117,7 @@ Re.OSSLT <- function (x) {
                                                  )
                                          )
                                  )
-         x$Prior_G6_W <- ifelse (x$Prior_G6_WOverallLevel == "-1", "No Information",
+         x$Prior_G6_Write <- ifelse (x$Prior_G6_WOverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G6_WOverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G6_WOverallLevel == "1", "Level 1",
                                                  ifelse (x$Prior_G6_WOverallLevel == "2", "Level 2",
@@ -134,7 +134,7 @@ Re.OSSLT <- function (x) {
                                          )
                                  )
                                  )
-         x$Prior_G3_R <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No Information",
+         x$Prior_G3_Read <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G3_ROverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G3_ROverallLevel == "1", "Level 1",
                                                  ifelse (x$Prior_G3_ROverallLevel == "2", "Level 2",
@@ -151,7 +151,7 @@ Re.OSSLT <- function (x) {
                                          )
                                  )
          )
-         x$Prior_G3_W <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No Information",
+         x$Prior_G3_Write <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G3_WOverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G3_WOverallLevel == "1", "Level 1",
                                                  ifelse (x$Prior_G3_WOverallLevel == "2", "Level 2",
