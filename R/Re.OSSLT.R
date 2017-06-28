@@ -2,20 +2,20 @@
 # Function to Recode OSSLT ISD Files --------------------------------------
 # Creates the following columns with recoded data
 # IEPcode - All IEP designations into single column
-# Outcome - Successful, Uncucessful, etc. 
+# Outcome - Successful, Uncucessful, etc.
 # GenderR - Male/Female
 # Eligibility - FTE/PE
-# Level of Study - Academic/Applied, etc. 
+# Level of Study - Academic/Applied, etc.
 # ESL - Yes/No
 # Prior_G6_R - Level 1, Level 2, etc.
 # Prior_G6_W - Level 1, Level 2, etc.
 # Prior_G3_R - Level 1, Level 2, etc.
 # Prior_G3_W - Level 1, Level 2, etc.
 
-# Use: 
+# Use:
 # df <- OSSLT.Recode (df)
 
-OSSLT.Recode <- function (x) {
+Re.OSSLT <- function (x) {
   ifelse("OSSLTOutcome" %in% colnames(x),
          {x$IEPcode <- paste0(x$IEP,
                               x$IPRCExBehaviour,
@@ -24,7 +24,7 @@ OSSLT.Recode <- function (x) {
                               x$IPRCExLanguage,
                               x$IPRCExSpeech,
                               x$IPRCExLearning,
-                              x$IPRCExGiftedness, 
+                              x$IPRCExGiftedness,
                               x$IPRCExMildIntellectual,
                               x$IPRCExDevelopmental,
                               x$IPRCExPhysical,
@@ -68,10 +68,10 @@ OSSLT.Recode <- function (x) {
                                       )
                               )
          )
-         
-         x$GenderR <- ifelse (x$Gender == "1", "Male", 
+
+         x$GenderR <- ifelse (x$Gender == "1", "Male",
                               ifelse (x$Gender == "2", "Female", "NA"))
-         
+
          x$Eligibility <- ifelse (x$EligibilityStatus == "-2", "Ambiguous",
                                   ifelse (x$EligibilityStatus == "-1", "Missing",
                                           ifelse (x$EligibilityStatus == "0", "Not Filled",
@@ -99,7 +99,7 @@ OSSLT.Recode <- function (x) {
                                           )
                                   )
                           )
-         
+
          x$Prior_G6_R <- ifelse (x$Prior_G6_ROverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G6_ROverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G6_ROverallLevel == "1", "Level 1",
@@ -168,10 +168,10 @@ OSSLT.Recode <- function (x) {
                                          )
                                  )
          )
-         
+
          },  x$ERROR <- "Incorrect File"
   )
-  return(x) 
+  return(x)
 }
 
 
