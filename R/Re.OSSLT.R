@@ -69,6 +69,7 @@ Re.OSSLT <- function (x) {
                                                       )
                                               )
                                       )
+                              )
 
          x$GenderR <- ifelse (x$Gender == "1", "Male",
                               ifelse (x$Gender == "2", "Female", "NA"))
