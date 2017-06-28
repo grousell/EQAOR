@@ -10,7 +10,9 @@ re.Achieve <- function (x) {
                                        ifelse (x$OSSLTOutcome == "2", "Unsuccessful",
                                                ifelse (x$OSSLTOutcome == "3", "Absent",
                                                        ifelse (x$OSSLTOutcome == "4", "OSSLC",
-                                                               ifelse (x$OSSLTOutcome == "6", "Exempt","Withheld")
+                                                               ifelse (x$OSSLTOutcome == "5", "Deferred",
+                                                                       ifelse (x$OSSLTOutcome == "6", "Exempt","Withheld")
+                                                               )
                                                        )
                                                )
                                        )
