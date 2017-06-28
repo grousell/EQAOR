@@ -2,7 +2,7 @@
 # Primary/Junior/Grade 9 - Converts 1, 2, 3, 4 to Level 1, Level 2, Level 3, Level 4
 # OSSLT - Recodes to Successful, Unsuccessful,
 
-achieveR <- function (x) {
+re.Achieve <- function (x) {
   ifelse("OSSLTOutcome" %in% colnames(x),
          {x$Outcome <- ifelse (x$OSSLTOutcome == "0", "Pending",
                                ifelse (x$OSSLTOutcome == "1", "Successful",
