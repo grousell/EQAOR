@@ -1,5 +1,5 @@
 #For use with all raw EQAO ISD file
-# 
+#
 #Use:   df <- Re.FI(df)
 #
 #French Immersion is an elementary distinction.  Secondary is addressed through course types
@@ -8,7 +8,7 @@
 
 Re.FI <- function(x){
   ifelse("Background_FrenchImmersion" %in% colnames(x),
-    {x$re.fi <- ifelse(x$Background_FrenchImmersion == "-1", "Missing",
+    {x$FI_R <- ifelse(x$Background_FrenchImmersion == "-1", "Missing",
                         ifelse(x$Background_FrenchImmersion == "0", "Not FI",
                                ifelse(x$Background_FrenchImmersion == "1", "FI (A)",
                                       ifelse(x$Background_FrenchImmersion == "2", "FI (B)",
@@ -19,7 +19,7 @@ Re.FI <- function(x){
                                       )
                                )
                         )
-       )},  x$re.fi <- "Secondary - Not Applicable"
+       )},  x$FI_R <- "Secondary - Not Applicable"
   )
-  return(x) 
+  return(x)
 }

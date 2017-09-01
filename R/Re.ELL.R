@@ -1,12 +1,12 @@
 #For use with all raw EQAO ISD file
-# 
+#
 #Use:   df <- Re.ELL(df)
 #
 #Function determines whether the ISD is elementary or secondary assessments and recodes
 
 Re.ELL <- function(x){
   ifelse("Background_ESLELD_ALFPDF" %in% colnames(x),
-    {x$re.ell <- ifelse(x$Background_ESLELD_ALFPDF == "-1", "Missing",
+    {x$ELL_R <- ifelse(x$Background_ESLELD_ALFPDF == "-1", "Missing",
                         ifelse(x$Background_ESLELD_ALFPDF == "0", "Not ELL",
                                ifelse(x$Background_ESLELD_ALFPDF == "1", "ELL",
                                       ifelse(x$Background_ESLELD_ALFPDF == "2", NULL,
@@ -17,7 +17,7 @@ Re.ELL <- function(x){
                         )
   )},
     ifelse("ESLELD_ALFPDF" %in% colnames(x),
-        {x$re.ell <- ifelse(x$ESLELD_ALFPDF == "-1", "Missing",
+        {x$ELL_R <- ifelse(x$ESLELD_ALFPDF == "-1", "Missing",
                           ifelse(x$ESLELD_ALFPDF == "0", "Not ELL",
                                  ifelse(x$ESLELD_ALFPDF == "1", "ELL",
                                         ifelse(x$ESLELD_ALFPDF == "2", NULL,
@@ -26,8 +26,8 @@ Re.ELL <- function(x){
                                         )
                                  )
                           )
-       )},  x$re.ell <- "Unknown File Format"
+       )},  x$ELL_R <- "Unknown File Format"
     )
 )
-  return(x) 
+  return(x)
 }
