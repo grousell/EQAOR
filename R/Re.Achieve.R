@@ -115,7 +115,7 @@ re.Achieve <- function (x) {
                                                                                     ifelse (x$Prior_G6_WOverallLevel == "P", "Pending",
                                                                                             ifelse (x$Prior_G6_WOverallLevel == "X", "Exempt", "Withheld")))))))))
 
-          x$Prior_G6_M <- ifelse (x$Prior_G6_MOverallLevel == "-1", "No information",
+          x$Prior_G6_Math <- ifelse (x$Prior_G6_MOverallLevel == "-1", "No information",
                                   ifelse (x$Prior_G6_MOverallLevel == "0", "NE1",
                                           ifelse(x$Prior_G6_MOverallLevel == "1", "Level 1",
                                                  ifelse(x$Prior_G6_MOverallLevel == "2", "Level 2",
@@ -125,7 +125,7 @@ re.Achieve <- function (x) {
                                                                                 ifelse (x$Prior_G6_MOverallLevel == "P", "Pending",
                                                                                         ifelse (x$Prior_G6_MOverallLevel == "X", "Exempt", "Withheld")))))))))
 
-          x$Prior_G3_R <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No information",
+          x$Prior_G3_Read <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No information",
                                   ifelse (x$Prior_G3_ROverallLevel == "0", "NE1",
                                           ifelse(x$Prior_G3_ROverallLevel == "1", "Level 1",
                                                  ifelse(x$Prior_G3_ROverallLevel == "2", "Level 2",
@@ -135,7 +135,7 @@ re.Achieve <- function (x) {
                                                                                 ifelse (x$Prior_G3_ROverallLevel == "P", "Pending",
                                                                                         ifelse (x$Prior_G3_ROverallLevel == "X", "Exempt", "Withheld")))))))))
 
-          x$Prior_G3_W <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No information",
+          x$Prior_G3_Write <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No information",
                                   ifelse (x$Prior_G3_WOverallLevel == "0", "NE1",
                                           ifelse(x$Prior_G3_WOverallLevel == "1", "Level 1",
                                                  ifelse(x$Prior_G3_WOverallLevel == "2", "Level 2",
@@ -145,7 +145,7 @@ re.Achieve <- function (x) {
                                                                                 ifelse (x$Prior_G3_WOverallLevel == "P", "Pending",
                                                                                         ifelse (x$Prior_G3_WOverallLevel == "X", "Exempt", "Withheld")))))))))
 
-          x$Prior_G3_M <- ifelse (x$Prior_G3_MOverallLevel == "-1", "No information",
+          x$Prior_G3_Math <- ifelse (x$Prior_G3_MOverallLevel == "-1", "No information",
                                   ifelse (x$Prior_G3_MOverallLevel == "0", "NE1",
                                           ifelse(x$Prior_G3_MOverallLevel == "1", "Level 1",
                                                  ifelse(x$Prior_G3_MOverallLevel == "2", "Level 2",
