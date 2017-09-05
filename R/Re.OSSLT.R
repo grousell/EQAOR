@@ -168,7 +168,7 @@ Re.OSSLT <- function (x) {
                                                                          ifelse (x$Prior_G3_WOverallLevel == "B", "No Data",
                                                                                  ifelse (x$Prior_G3_WOverallLevel == "W", "Withheld",
                                                                                          ifelse (x$Prior_G3_WOverallLevel == "X", "Exempt",
-                                                                                                 ifelse (x$Prior_G6_ROverallLevel == "Q", "No Information", "NA")
+                                                                                                 ifelse (x$Prior_G3_WOverallLevel == "Q", "No Information", "NA")
                                                                                  )
                                                                          )
                                                                  )
