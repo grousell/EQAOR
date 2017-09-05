@@ -110,7 +110,8 @@ Re.OSSLT <- function (x) {
                                                                  ifelse (x$Prior_G6_ROverallLevel == "4", "Level 4",
                                                                          ifelse (x$Prior_G6_ROverallLevel == "B", "No Data",
                                                                                  ifelse (x$Prior_G6_ROverallLevel == "W", "Withheld",
-                                                                                         ifelse (x$Prior_G6_ROverallLevel == "X", "Exempt", "NA")
+                                                                                         ifelse (x$Prior_G6_ROverallLevel == "X", "Exempt",
+                                                                                                 ifelse (x$Prior_G6_ROverallLevel == "Q", "No Information", "NA")
                                                                                          )
                                                                                  )
                                                                          )
@@ -118,6 +119,7 @@ Re.OSSLT <- function (x) {
                                                          )
                                                  )
                                          )
+                                 )
                                  )
          x$Prior_G6_Write <- ifelse (x$Prior_G6_WOverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G6_WOverallLevel == "0", "NE1",
@@ -127,13 +129,15 @@ Re.OSSLT <- function (x) {
                                                                  ifelse (x$Prior_G6_WOverallLevel == "4", "Level 4",
                                                                          ifelse (x$Prior_G6_WOverallLevel == "B", "No Data",
                                                                                  ifelse (x$Prior_G6_WOverallLevel == "W", "Withheld",
-                                                                                         ifelse (x$Prior_G6_WOverallLevel == "X", "Exempt", "NA")
+                                                                                         ifelse (x$Prior_G6_WOverallLevel == "X", "Exempt",
+                                                                                                 ifelse (x$Prior_G6_WOverallLevel == "Q", "No Information", "NA")
                                                                                  )
                                                                          )
                                                                  )
                                                          )
                                                  )
                                          )
+                                 )
                                  )
                                  )
          x$Prior_G3_Read <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No Information",
@@ -144,7 +148,8 @@ Re.OSSLT <- function (x) {
                                                                  ifelse (x$Prior_G3_ROverallLevel == "4", "Level 4",
                                                                          ifelse (x$Prior_G3_ROverallLevel == "B", "No Data",
                                                                                  ifelse (x$Prior_G3_ROverallLevel == "W", "Withheld",
-                                                                                         ifelse (x$Prior_G3_ROverallLevel == "X", "Exempt", "NA")
+                                                                                         ifelse (x$Prior_G3_ROverallLevel == "X", "Exempt",
+                                                                                                 ifelse (x$Prior_G3_ROverallLevel == "Q", "No Information", "NA")
                                                                                  )
                                                                          )
                                                                  )
@@ -152,7 +157,8 @@ Re.OSSLT <- function (x) {
                                                  )
                                          )
                                  )
-         )
+                                 )
+                                 )
          x$Prior_G3_Write <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No Information",
                                  ifelse (x$Prior_G3_WOverallLevel == "0", "NE1",
                                          ifelse (x$Prior_G3_WOverallLevel == "1", "Level 1",
@@ -161,13 +167,15 @@ Re.OSSLT <- function (x) {
                                                                  ifelse (x$Prior_G3_WOverallLevel == "4", "Level 4",
                                                                          ifelse (x$Prior_G3_WOverallLevel == "B", "No Data",
                                                                                  ifelse (x$Prior_G3_WOverallLevel == "W", "Withheld",
-                                                                                         ifelse (x$Prior_G3_WOverallLevel == "X", "Exempt", "NA")
+                                                                                         ifelse (x$Prior_G3_WOverallLevel == "X", "Exempt",
+                                                                                                 ifelse (x$Prior_G6_ROverallLevel == "Q", "No Information", "NA")
                                                                                  )
                                                                          )
                                                                  )
                                                          )
                                                  )
                                          )
+                                 )
                                  )
          )
 
