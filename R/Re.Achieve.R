@@ -201,7 +201,7 @@ re.Achieve <- function (x) {
                                          )
                                          )
 
-                 x$G3Read <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No Data",
+                 x$Prior_G3_Read <- ifelse (x$Prior_G3_ROverallLevel == "-1", "No Data",
                                      ifelse (x$Prior_G3_ROverallLevel == "0", "NE1",
                                              ifelse(x$Prior_G3_ROverallLevel == "1", "Level 1",
                                                     ifelse (x$Prior_G3_ROverallLevel == "2", "Level 2",
@@ -225,7 +225,7 @@ re.Achieve <- function (x) {
                                      )
                  )
 
-                 x$G3Write <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No Data",
+                 x$Prior_G3_Write <- ifelse (x$Prior_G3_WOverallLevel == "-1", "No Data",
                                      ifelse (x$Prior_G3_WOverallLevel == "0", "NE1",
                                              ifelse(x$Prior_G3_WOverallLevel == "1", "Level 1",
                                                     ifelse (x$Prior_G3_WOverallLevel == "2", "Level 2",
@@ -249,7 +249,7 @@ re.Achieve <- function (x) {
                                      )
                  )
 
-                 x$G3Math <- ifelse (x$Prior_G3_MOverallLevel == "-1", "No Data",
+                 x$Prior_G3_Math <- ifelse (x$Prior_G3_MOverallLevel == "-1", "No Data",
                                      ifelse (x$Prior_G3_MOverallLevel == "0", "NE1",
                                              ifelse(x$Prior_G3_MOverallLevel == "1", "Level 1",
                                                     ifelse (x$Prior_G3_MOverallLevel == "2", "Level 2",
